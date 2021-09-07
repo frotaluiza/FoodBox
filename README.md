@@ -1,2 +1,3 @@
 # FoodBox
-Aplicação para pedir comida.
+Aplicação para pedir comida, feita por mim.
+
