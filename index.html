@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food Box</title>
+</head>
+<body>
+    <header>
+	<h1>Food Box</h1>
+    <h2>Monte seu box e receba em 15 minutos!</h2>
+    </header>
+    <h3>Primeiro, seu prato</h3>
+    <div id="frango" class="produto" onclick="escolherFrango()">
+        <img src="./Imagens/frango.jpg"/>
+        <h4>Frango Yin-Yang</h4>
+        <p>Um pouco de batata, um pouco de salada</p>
+        <p class="precos">R$19,90</p>
+        
+    </div>
+    
+    <div id="carne" onclick="escolherCarne()" class="produto">
+        <img src="./Imagens/cane.jpg"/>
+        <h4>Carne e salada</h4>
+        <p>Partida ao meio para parecer mais carne</p>
+        <p class="precos">R$24,90</p>    
+    </div>
+    <h3>Agora, sua bebida</h3>
+    <div id="coca" class="produto" onclick="escolherCoca()">
+        <img style=object-fit: contain' src="./Imagens/coca.jpg"/>
+        <h4>Coca-cola</h4>
+        <p>Normal ou zero</p>
+        <p class="precos">R$5,90</p>   
+    </div>
+    <div id="suco" class="produto" onclick="escolherSuco()">
+        <img src="./Imagens/suco.jpg"/>
+        <h4>Suco de Laranja</h4>
+        <p>Para dar quela refrescada depois de comer</p>
+        <p class="precos">R$4,90</p>    
+    </div>
+    <h3>E por fim, sua sobremesa</h3>
+    <div id="bolo" class="produto" onclick="escolherBolo()">
+        <img style=object-fit: contain' src="./Imagens/bolo.jpg"/>
+        <h4>Bolo de chocolate</h4>
+        <p>Bolinho caseiro</p>
+        <p class="precos">R$5,90</p>   
+    </div>
+    <div id="pizza" class="produto" onclick="escolherPizza()">
+        <img src="./Imagens/pizza.jpg"/>
+        <h4>Pizza de banana</h4>
+        <p>Massa leve e saborosa</p>
+        <p class="precos">R$4,90</p>    
+    </div>
+    <div class=botao onclick="final()">
+        Finalizar pedido
+    </div>
+    
+<!--     
+  Perguntas: 
+  Como fazer meu hover não mover as outras partes? 
+  É recomandado colocar button ou <input type="button">?
+  Como importar uma função JavaScript de outro arquivo?
+  Como fazer ao mesmo tempo meu transform sem afetar o onClick?
+  -->
+   
+  <script>
+    function escolherFrango(){
+        document.getElementById("frango").style.borderColor= "green";
+        document.getElementById("carne").style.borderColor= "white";
+
+    }
+    function escolherCarne(){
+        document.getElementById("carne").style.borderColor= "green";
+        document.getElementById("frango").style.borderColor= "white";
+
+    }
+    function escolherCoca(){
+        document.getElementById("coca").style.borderColor= "green";
+        document.getElementById("suco").style.borderColor= "white";
+
+    }
+    function escolherSuco(){
+        document.getElementById("suco").style.borderColor= "green";
+        document.getElementById("coca").style.borderColor= "white";
+
+    }
+    function escolherBolo(){
+        document.getElementById("bolo").style.borderColor= "green";
+        document.getElementById("pizza").style.borderColor= "white";
+
+    }
+    function escolherPizza(){
+        document.getElementById("pizza").style.borderColor= "green";
+        document.getElementById("bolo").style.borderColor= "white";
+
+    }
+    function final(){
+        if (document.getElementById("carne").style.borderColor==="green"){
+           alert("oi");
+        }
+        
+    }
+   
+  </script>  
+</body>
+</html>
