@@ -53,7 +53,7 @@
         <p>Massa leve e saborosa</p>
         <p class="precos">R$4,90</p>    
     </div>
-    <div class=botao onclick="final()">
+    <div class=botao onclick="finalizarPedido()">
         Finalizar pedido
     </div>
     
@@ -66,42 +66,44 @@
   -->
    
   <script>
+      let prato;
+      let sobremesa;
+      let bebida;
     function escolherFrango(){
         document.getElementById("frango").style.borderColor= "green";
         document.getElementById("carne").style.borderColor= "white";
-
+        prato = "Frango";
     }
     function escolherCarne(){
         document.getElementById("carne").style.borderColor= "green";
         document.getElementById("frango").style.borderColor= "white";
-
+        prato = "Carne";
     }
     function escolherCoca(){
         document.getElementById("coca").style.borderColor= "green";
         document.getElementById("suco").style.borderColor= "white";
-
+        bebida = "Coca-cola";
     }
     function escolherSuco(){
         document.getElementById("suco").style.borderColor= "green";
         document.getElementById("coca").style.borderColor= "white";
-
+        bebida = "Suco";
     }
     function escolherBolo(){
         document.getElementById("bolo").style.borderColor= "green";
         document.getElementById("pizza").style.borderColor= "white";
-
+        sobremesa = "Bolo";
     }
     function escolherPizza(){
         document.getElementById("pizza").style.borderColor= "green";
         document.getElementById("bolo").style.borderColor= "white";
+        sobremesa = "Pizza de banana";
+    }
+    function finalizarPedido(){
+        let mensagem = "Olá, gostaria de pedir um combo: "+prato+", "+bebida+" e "+sobremesa;
+        window.open("https://wa.me/+5521996121647?text="+mensagem)        
+    }
 
-    }
-    function final(){
-        if (document.getElementById("carne").style.borderColor==="green"){
-           alert("oi");
-        }
-        
-    }
    
   </script>  
 </body>
